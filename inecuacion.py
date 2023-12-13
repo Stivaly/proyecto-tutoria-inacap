@@ -1,15 +1,14 @@
 from setdatabase import *
 from email import *
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
 
 """
 Esta clase permite enviar correos electrónicos a través de un servidor SMTP.
 Debes conocer las credenciales del remitente (correo y contraseña) y el servidor SMTP, además del puerto SMTP. Esto debes solicitarselo al administrador del servidor SMTP.
 """
-
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-
 class Correo:
     def __init__(self):
         self.remitente = 'ejemplo@gmail.com' # Se recomienda que el remitente sea un correo noreply genérico
@@ -79,6 +78,4 @@ class Inecuacion(Correo):
                 print("No hay alumnos en riesgo de reprobar el ramo")
             
 
-    def __str__(self):
-        return self.inecuacion
 
