@@ -68,25 +68,3 @@ class DatabaseConnector:
         conn.close()
         return result
 
-"""
- Usage example
-db_connector = DatabaseConnector()
-
-mysql_conn = db_connector.connect_mysql()
-mysql_result = db_connector.fetch_data(mysql_conn)
-for row in mysql_result:
-    nota1, nota2, nota3, nota4, tutor_nombre, tutor_correo, alumno_nombre, semestre = row
-     Process the data as needed
-
-pg_conn = db_connector.connect_postgresql()
-pg_result = db_connector.fetch_data(pg_conn)
-for row in pg_result:
-    nota1, nota2, nota3, nota4, tutor_nombre, tutor_correo, alumno_nombre, semestre = row
-     Process the data as needed
-
-sqlite_conn = db_connector.connect_sqlite()
-sqlite_result = db_connector.fetch_data(sqlite_conn)
-for row in sqlite_result:
-    nota1, nota2, nota3, nota4, tutor_nombre, tutor_correo, alumno_nombre, semestre = row
-     Process the data as needed
-     """
