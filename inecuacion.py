@@ -1,5 +1,4 @@
 from setdatabase import *
-from email import *
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -41,6 +40,7 @@ class Inecuacion(Correo):
         self.alumno_nombre = "alumno_nombre"
         self.semestre = "semestre"
         self.asignatura_nombre = "asignatura_nombre"
+        self.carrera = "carrera"
         self._solicitud_base_datos()
         
     def _solicitud_base_datos(self):
@@ -48,25 +48,25 @@ class Inecuacion(Correo):
         connect = database.connect_sqlite()
         result = database.fetch_data(connect)
         for row in result:
-            nota1, nota2, nota3, nota4, tutor_nombre, tutor_correo, alumno_nombre, semestre, asignatura_nombre = row
-            if nota1 + nota2 < 4:
+            self.nota1, self.nota2, self.nota3, self.nota4, self.tutor_nombre, self.tutor_correo, self.alumno_nombre, self.semestre, self.asignatura_nombre, self.carrera = row
+            if self.nota1 + self.nota2 < 4:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} del semestre {self.semestre}.")
-            elif nota2 + nota3 < 4:
+                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+            elif self.nota2 + self.nota3 < 4:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} del semestre {self.semestre}.")
-            elif nota3 + nota4 < 4:
+                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+            elif self.nota3 + self.nota4 < 4:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} del semestre {self.semestre}.")
-            elif nota1 + nota4 < 4:
+                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+            elif self.nota1 + self.nota4 < 4:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} del semestre {self.semestre}.")
-            elif nota2 + nota4 < 4:
+                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+            elif self.nota2 + self.nota4 < 4:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} del semestre {self.semestre}.")
-            elif nota1 + nota3 < 4:
+                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+            elif self.nota1 + self.nota3 < 4:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} del semestre {self.semestre}.")
+                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
             else:
                 print("No hay alumnos en riesgo de reprobar el ramo")
             
