@@ -67,27 +67,27 @@ class Inecuacion(Correo):
             self.semestre = semestre
             self.asignatura_nombre = asignatura_nombre
             self.carrera = carrera
-            if self.nota1 < 4.0 or self.nota2 < 4.0:
+            if self.nota1 < 4.0 and self.nota2 < 4.0:
                 envio_mail = Correo()
                 envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
                 print("Correo enviado correctamente")
-            elif self.nota1 < 4.0 or self.nota2 < 4.0:
+            elif self.nota1 < 4.0 and self.nota2 < 4.0:
                 envio_mail = Correo()
                 envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
                 print("Correo enviado correctamente")
-            elif self.nota1 < 4.0 or self.nota2 < 4.0:
+            elif self.nota1 < 4.0 and self.nota2 < 4.0:
                 envio_mail = Correo()
                 envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
                 print("Correo enviado correctamente")
-            elif self.nota1 < 4.0 or self.nota2 < 4.0:
+            elif self.nota1 < 4.0 and self.nota2 < 4.0:
                 envio_mail = Correo()
                 envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
                 print("Correo enviado correctamente")
-            elif self.nota1 < 4.0 or self.nota2 < 4.0:
+            elif self.nota1 < 4.0 and self.nota2 < 4.0:
                 envio_mail = Correo()
                 envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
                 print("Correo enviado correctamente")
-            elif self.nota1 < 4.0 or self.nota2 < 4.0:
+            elif self.nota1 < 4.0 and self.nota2 < 4.0:
                 envio_mail = Correo()
                 envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
                 print("Correo enviado correctamente")
