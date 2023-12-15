@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4868b3e1-7259-47a5-8693-f078e31dbf47" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/proyecto-tutoria-inacap.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/COLLECT-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/warn-main.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/xref-main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demostración.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demotutorias.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demotutorias.db-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/MSVCP140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/VCRUNTIME140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/VCRUNTIME140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_bz2.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_ctypes.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_decimal.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_hashlib.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_lzma.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_multiprocessing.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_mysql_connector.cp312-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_queue.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_socket.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_sqlite3.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_ssl.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_uuid.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/_wmi.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/libcrypto-3-x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/libcrypto-3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/libffi-8.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/libmysql.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/libssl-3-x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/libssl-3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/psycopg2/_psycopg.cp312-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/pyexpat.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/python312.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/select.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/sqlite3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_internal/unicodedata.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/demotutorias.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inecuacion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script_tutores.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setdatabase.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/inecuacion.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ZEBeMSLeyMnTEdtbf3KPGQxr0u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Stiva/Desktop/Git-Repositories/decorators&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4868b3e1-7259-47a5-8693-f078e31dbf47" name="Changes" comment="" />
+      <created>1701977454242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701977454242</updated>
+    </task>
+    <servers />
+  </component>
+</project>
