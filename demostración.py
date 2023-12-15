@@ -17,8 +17,7 @@ def menu():
     print("Se recomienda que el programa se ejecute cada 24horas para evitar la saturación de los servidores.")
     print("Para configurar el programa se debe ejecutar el archivo main.py")
     print("Para iniciar el programa se debe ejecutar el archivo main.py")
-    print("""
-    ingresa 1 para iniciar el programa""")
+    print("""Ingresa 1 para iniciar el programa""")
 
 def main():
     """
@@ -27,7 +26,12 @@ def main():
     menu()
     opcion = int(input("Ingrese una opción: "))
     if opcion == 1:
+        print("iniciando script")
         script = Inecuacion()
+
     else:
         print("Opción incorrecta, por favor intente nuevamente.")
         main()
+
+
+main()

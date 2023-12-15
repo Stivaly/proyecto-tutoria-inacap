@@ -10,22 +10,27 @@ Debes conocer las credenciales del remitente (correo y contraseña) y el servido
 """
 class Correo:
     def __init__(self):
-        self.remitente = 'ejemplo@gmail.com' # Se recomienda que el remitente sea un correo noreply genérico
-        self.contraseña = '21AEBC48383652046150C3663A57B1CB5BF957B5ECE024DEB9CBC087478CDF80' # Se debe solicitar el acceso por seguridad a el administrador del servidor SMTP para su configuración
+        self.remitente = 'stivaly@acredifast.cl' # Se recomienda que el remitente sea un correo noreply genérico
+        self.contraseña = '123acredifast!' # Se debe solicitar el acceso por seguridad a el administrador del servidor SMTP para su configuración
         self.servidor_smtp = 'smtp.gmail.com' # Cambiar si se usa otro servidor SMTP
-        self.puerto_smtp = '587' # Cambiar si se usa otro puerto SMTP
+        self.puerto_smtp = 587 # Cambiar si se usa otro puerto SMTP
 
     def enviar_correo(self, destinatario, asunto, mensaje):
+        print("Intentando enviar correo...")
         mensaje_correo = MIMEMultipart()
         mensaje_correo['From'] = self.remitente
         mensaje_correo['To'] = destinatario
         mensaje_correo['Subject'] = asunto
         mensaje_correo.attach(MIMEText(mensaje, 'plain'))
 
-        with smtplib.SMTP(host=self.servidor_smtp, port=self.puerto_smtp) as server:
-            server.starttls()
-            server.login(self.remitente, self.contraseña)
-            server.send_message(mensaje_correo)
+        try:
+            with smtplib.SMTP(host=self.servidor_smtp, port=self.puerto_smtp) as server:
+                server.starttls()
+                server.login(self.remitente, self.contraseña)
+                server.send_message(mensaje_correo)
+                print("Correo enviado exitosamente.")
+        except Exception as e:
+            print(f"Error al enviar el correo: {e}")
 
 
 class Inecuacion(Correo):
@@ -36,7 +41,7 @@ class Inecuacion(Correo):
         self.nota3 = 0
         self.nota4 = 0
         self.tutor_nombre = "tutor_nombre"
-        self.tutor_correo = "tutor_correo"
+        self.tuto_correo = "tutor_correo"
         self.alumno_nombre = "alumno_nombre"
         self.semestre = "semestre"
         self.asignatura_nombre = "asignatura_nombre"
@@ -47,27 +52,47 @@ class Inecuacion(Correo):
         database = DatabaseConnector()
         connect = database.connect_sqlite()
         result = database.fetch_data(connect)
+        print("prueba")
         for row in result:
-            self.nota1, self.nota2, self.nota3, self.nota4, self.tutor_nombre, self.tutor_correo, self.alumno_nombre, self.semestre, self.asignatura_nombre, self.carrera = row
-            if self.nota1 + self.nota2 < 4:
+            print(result)
+            nota1, nota2, nota3, nota4, tutor_nombre, tuto_correo, alumno_nombre, semestre, asignatura_nombre, carrera = row
+            print(row)
+            self.nota1 = nota1
+            self.nota2 = nota2
+            self.nota3 = nota3
+            self.nota4 = nota4
+            self.tutor_nombre = tutor_nombre
+            self.tuto_correo = tuto_correo
+            self.alumno_nombre = alumno_nombre
+            self.semestre = semestre
+            self.asignatura_nombre = asignatura_nombre
+            self.carrera = carrera
+            if self.nota1 < 4.0 or self.nota2 < 4.0:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
-            elif self.nota2 + self.nota3 < 4:
+                envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                print("Correo enviado correctamente")
+            elif self.nota1 < 4.0 or self.nota2 < 4.0:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
-            elif self.nota3 + self.nota4 < 4:
+                envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                print("Correo enviado correctamente")
+            elif self.nota1 < 4.0 or self.nota2 < 4.0:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
-            elif self.nota1 + self.nota4 < 4:
+                envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                print("Correo enviado correctamente")
+            elif self.nota1 < 4.0 or self.nota2 < 4.0:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
-            elif self.nota2 + self.nota4 < 4:
+                envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                print("Correo enviado correctamente")
+            elif self.nota1 < 4.0 or self.nota2 < 4.0:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
-            elif self.nota1 + self.nota3 < 4:
+                envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                print("Correo enviado correctamente")
+            elif self.nota1 < 4.0 or self.nota2 < 4.0:
                 envio_mail = Correo()
-                envio_mail.enviar_correo(self.tutor_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                envio_mail.enviar_correo(self.tuto_correo, "Riesgo de reprobación", f"Estimado/a {self.tutor_nombre} su pupilo {self.alumno_nombre} está en riesgo de reprobar el ramo {self.asignatura_nombre} de la carrera {self.carrera} del semestre {self.semestre}.")
+                print("Correo enviado correctamente")
             else:
                 print("No hay alumnos en riesgo de reprobar el ramo")
+            connect.close()
             
         return print("El Script ha finalizado correctamente.")

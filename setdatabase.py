@@ -61,10 +61,10 @@ class DatabaseConnector:
 
     def fetch_data(self, conn):
         cursor = conn.cursor()
-        cursor.execute("SELECT nota1, nota2, nota3, nota4, tutor_nombre, tutor_correo, alumno_nombre, alumno_rut, semestre, asignatura_nombre, carrera FROM notas")
+        cursor.execute("SELECT nota1, nota2, nota3, nota4, tutor_nombre, tuto_correo, alumno_nombre, semestre, asignatura_nombre, carrera FROM Tutorias")
         # Consultar al administrador de la base de datoss la consulta correcta para sacar estos datos y pegala en el cursor.execute
         result = cursor.fetchall()
         cursor.close()
-        conn.close()
+
         return result
 
