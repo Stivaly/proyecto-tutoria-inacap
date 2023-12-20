@@ -10,7 +10,7 @@ Debes conocer las credenciales del remitente (correo y contraseña) y el servido
 """
 class Correo:
     def __init__(self):
-        self.remitente = 'notreply@ejemplo.co' # Se recomienda que el remitente sea un correo noreply genérico
+        self.remitente = 'notreply@ejemplo.com' # Se recomienda que el remitente sea un correo noreply genérico
         self.contraseña = '' # Se debe solicitar el acceso por seguridad a el administrador del servidor SMTP para su configuración
         self.servidor_smtp = 'smtp-mail.outlook.com' # Cambiar si se usa otro servidor SMTP
         self.puerto_smtp = 587 # Cambiar si se usa otro puerto SMTP
