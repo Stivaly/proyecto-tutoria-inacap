@@ -2,11 +2,9 @@
 
 ## Bienvenido al repositorio de funcionalidades de tutoria de INACAP. 
 
-En este repositorio realizamos un ejecutable para el archivo modificado. 
+En este repositorio realizamos un script ejecutable que automatiza la verificación de notas de los alumnos de Inacap, esto con el fin de mejorar la respuesta del programa de tutorías. El proceso de automatización se encarga de hacer consultas a la base de datos y notificar a los tutores en caso de que 2 notas de un ramo se encuentren por debajo del mínimo  de aprobación. 
 
 Para ejecutar este script ingresa a la carpeta dist, y ejecuta el archivo main.exe
-
-El objetivo de este Script es poder notificar automáticamente a los tutores de inacap cuando un alumno tenga 2 notas reprobradas en un ramo/asignatura, permitiendo así un control y reacción más rápido.
 
 Los temas tratados: 
 
@@ -15,6 +13,7 @@ Los temas tratados:
 - Consultas de SQL.
 - Manejo de cursores
 - Documentación del programa
+- Manejo de protocolo SMTP para envío de correo electrónico.
 
 Video de presentación: https://youtu.be/cwgwmWa6sFc
 
